@@ -1,0 +1,16 @@
+@()(implicit request: RequestHeader, flash: Flash)
+
+@main("Space Ship Version 2") {
+
+<h2>Welcome!</h2>
+Let's start coding the game spaceship Game!
+<div id="contents"></div>
+
+<input type="hidden" id="startPage" value="@routes.SpaceShip.index()" >
+<input type="hidden" id="createUser" value="@routes.SpaceShip.create_user()" >
+<input type="hidden" id="csrfToken" value="@helper.CSRF.getToken.value" >
+
+
+<script src="@routes.Assets.versioned("javascript/spaceship.js")"></script>
+
+}
